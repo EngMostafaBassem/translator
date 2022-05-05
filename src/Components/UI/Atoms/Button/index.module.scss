@@ -1,0 +1,14 @@
+.btn{
+    background-color: #764AF1;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out ;
+    margin: 1rem;
+    &:hover{
+        box-shadow: 0 0 8px #764AF1 ;
+    }
+}
