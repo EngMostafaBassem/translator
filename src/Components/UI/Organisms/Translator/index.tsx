@@ -8,12 +8,15 @@ import TranslateArea from '../../Molecules/Translate-Area'
 const Translator=()=>{
     const Context=React.useContext(TranslateContext)
     const handleTranslate=useCallback(async()=>{
+       if(Context?.query){
         Context?.setLoading(true)
         const respnose=await axios.post(
              'https://translate-ar-de.herokuapp.com/translator',
              {from:Context?.from,to:Context?.to,query:Context?.query})
         Context?.setLoading(false)
-        Context?.setTranslated(respnose.data)      
+        Context?.setTranslated(respnose.data)  
+       }
+          
     },[Context])
     return(
         <>
