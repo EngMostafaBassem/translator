@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './index.module.scss'
 interface ButtonProps{
-    title:string
+    title:string,
+    onClick:()=>void
 }
-const Button:React.FC<ButtonProps>=({title})=>{
+const Button:React.FC<ButtonProps>=({title,onClick})=>{
     return(
-        <button className={styles['btn']}>{title}</button>
+        <button className={styles['btn']} onClick={onClick}>{title}</button>
     )
 
 }
